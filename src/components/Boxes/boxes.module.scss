@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width:900px) {
+    flex-direction: row;
+  }
+
+  &_inverted {
+    .box__text {
+      order: -1;
+    }
+  }
+}
+
+.box {
+  @media (min-width:900px) {
+    width: 47.5%;
+  }
+
+  &__text {
+    letter-spacing: 0.6px;
+    text-align: justify;
+    max-width: 500px;
+
+    @media (min-width: 900px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__img {
+    @media (max-width:900px) {
+      width: 80%;
+      order: -1;
+      margin-bottom: 2rem;
+      max-width: 350px;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import '../../styles/general';
+
+.wrapper {
+  @include section;
+}
+
+.container {
+  @include container;
+}

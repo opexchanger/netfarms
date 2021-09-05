@@ -1,0 +1,15 @@
+@import '../../styles/general';
+
+.partners {
+  @include greenGradientBG;
+  margin: 4rem 0;
+  padding: 6rem 0;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.slides__wrapper {
+  @include container;
+}

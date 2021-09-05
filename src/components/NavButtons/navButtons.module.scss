@@ -1,0 +1,35 @@
+.wrapper {
+  ul {
+    display: flex;
+  }
+
+  li {
+    margin: 0 0.5rem;
+
+    &:last-child {
+      @media (max-width: 320px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.navBtn:link,
+.navBtn:visited {
+  display: inline-block;
+  background-color: var(--color-green-2);
+  padding: 0.3rem 1.85rem;
+  border-radius: 20px;
+  color: var(--color-white);
+  white-space: nowrap;
+  border: 2px solid transparent;
+
+  transition: all .3s;
+
+  font-size: 1.4rem;
+}
+
+.navBtn:hover {
+  background-color: transparent;
+  border: 2px solid var(--color-green-2);
+}

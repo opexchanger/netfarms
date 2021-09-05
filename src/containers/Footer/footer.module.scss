@@ -1,0 +1,73 @@
+@import '../../styles/general';
+
+.footer {
+  background-color: var(--color-gray-light);
+  // color: var(--color-white);
+
+  &__container {
+    @include container;
+
+    padding: 6rem 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+  }
+
+  &__pages {
+    li:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__contact {
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__text {
+    margin-bottom: 0;
+  }
+
+  &__address {
+    order: 2;
+    max-width: 200px;
+
+    @media (min-width: 720px) {
+      order: 0;
+    }
+  }
+
+  &__media {
+    order: 1;
+
+    @media (min-width: 720px) {
+      order: 0;
+    }
+    ul {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+
+.icon {
+  color: #474747;
+  font-size: 2.6rem;
+}

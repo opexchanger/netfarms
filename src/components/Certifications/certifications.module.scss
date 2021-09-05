@@ -1,0 +1,12 @@
+@import '../../styles/general';
+
+.certif {
+  @include section;
+  &__container {
+    @include container;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}

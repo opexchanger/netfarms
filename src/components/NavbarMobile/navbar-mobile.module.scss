@@ -1,0 +1,92 @@
+@import '../../styles/general';
+
+.btnOpen {
+  border: 0;
+  background-color: transparent;
+  height: 27px;
+  z-index: 11;
+  cursor: pointer;
+
+  @media (min-width: 900px) {
+    display: none;
+  }
+
+  &.showNav {
+    div {
+      background-color: transparent;
+
+      &::before {
+        transform: rotate(45deg);
+        top: 0;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+    }
+  }
+
+  div {
+    width: 35px;
+    height: 3px;
+    background-color: var(--color-green-2);
+    border-radius: 2px;
+
+    transition: all .2s;
+
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 35px;
+      height: 3px;
+      background-color: var(--color-green-2);
+      border-radius: 2px;
+
+      transition: all .4s;
+
+      position: absolute;
+      left: 0;
+    }
+    &::before {
+      top: -9px;
+    }
+    &::after {
+      bottom: -9px;
+    }
+  }
+}
+
+.navMobile {
+  position: fixed;
+  left: -5px;
+  right: 0;
+  bottom: 0;
+  top: 0;
+
+  &__list {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    &__item {
+      margin: 2.5rem 0;
+
+      a {
+        font-size: 3rem;
+
+        @include menuHoverEffect;
+      }
+      
+    }
+  }
+
+  z-index: 10;
+
+  background-color: var(--color-green-3);
+  color: var(--color-white);
+}

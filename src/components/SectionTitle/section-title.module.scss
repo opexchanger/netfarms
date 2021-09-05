@@ -1,0 +1,13 @@
+.title {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+
+  @media (min-width: 900px) {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+
+  span {
+    color: var(--color-green-1);
+  }
+}

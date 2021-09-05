@@ -1,0 +1,9 @@
+.wrapper {
+  & > div {
+    display: block;
+  }
+
+  img {
+    border-radius: 50%;
+  }
+}
